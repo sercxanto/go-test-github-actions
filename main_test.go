@@ -1,6 +1,10 @@
 package main
 
-func ExampleMain() {
-	main()
-	// Output: Hello, World!
+import "testing"
+
+func TestGenText(t *testing.T) {
+	result := genText()
+	if result != "Hello World!" {
+		t.Fatalf("genText() = %v, want %v", result, "Hello World!")
+	}
 }
