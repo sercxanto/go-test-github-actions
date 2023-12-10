@@ -6,6 +6,6 @@ Testing github actions
 
 ```shell
 go install github.com/goreleaser/goreleaser@latest
-goreleaser release --snapshot --clean
+goreleaser release --snapshot --clean --release-notes CHANGELOG.md
 ```
 
