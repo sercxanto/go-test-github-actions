@@ -2,7 +2,7 @@ module test-github-actions
 
 go 1.21.1
 
-require github.com/Code-Hex/Neo-cowsay/v2 v2.0.3
+require github.com/Code-Hex/Neo-cowsay/v2 v2.0.4
 
 require (
 	github.com/Code-Hex/go-wordwrap v1.0.0 // indirect
