@@ -13,7 +13,7 @@ func genText() string {
 func main() {
 	fmt.Println(genText())
 	say, _ := cowsay.Say(
-		"Hello World!",
+		"Muuh!",
 		cowsay.Type("default"),
 		cowsay.BallonWidth(40),
 	)
