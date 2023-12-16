@@ -25,9 +25,8 @@ jobs:
           go-version: stable
       - uses: goreleaser/goreleaser-action@v5
         with:
-          # either 'goreleaser' (default) or 'goreleaser-pro':
           distribution: goreleaser
           version: latest
-          args: release --clean --release-notes CHANGELOG.md
+          args: release --clean --release-notes .changes/${{ github.ref_name }}.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
