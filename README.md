@@ -9,9 +9,20 @@ go install github.com/goreleaser/goreleaser@latest
 goreleaser release --snapshot --clean --release-notes CHANGELOG.md
 ```
 
+## Start with a new change
+
+Call `changie new`:
+
+```shell
+changie new
+```
+
+This will ask for the kind of change and create a new file in `./changes/unreleased`.
+
 ## Create new release
 
 ```shell
-go changie batch minor
-go changie merge
+changie batch minor
+changie merge
 ```
+
