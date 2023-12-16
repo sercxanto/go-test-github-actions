@@ -1,8 +1,19 @@
 # test-github-actions
 Testing github actions
 
+![Build and test](https://github.com/sercxanto/test-github-actions/actions/workflows/build-and-test.yml/badge.svg)
+![golangci-lint](https://github.com/sercxanto/test-github-actions/actions/workflows/golangci-lint.yml/badge.svg)
 
 ## Developer documentation
+
+### Prerequisites
+
+This software uses [changie](https://changie.dev/) and [goreleaser](https://goreleaser.com/):
+
+```shell
+go install github.com/miniscruff/changie@latest
+go install github.com/goreleaser/goreleaser@latest
+```
 
 ### Start with a new change
 
@@ -14,7 +25,7 @@ changie new
 
 This will ask for the kind of change and create a new file in `./changes/unreleased`.
 
-## Create new release
+### Create new release
 
 The release process consists of the following steps:
 
@@ -22,7 +33,7 @@ The release process consists of the following steps:
 2. Test goreleaser locally
 3. Tag the release locally and trigger goreleaser on Github CI
 
-### Create changelog locally
+#### Create changelog locally
 
 `changie batch` collects unreleased changes info from `./changes/unreleased` and creates a
 new version file like `./changes/v1.2.3.md`.
@@ -44,14 +55,13 @@ git add .
 git commit ...
 ```
 
-### Test goreleaser locally
+#### Test goreleaser locally
 
 ```shell
-go install github.com/goreleaser/goreleaser@latest
 goreleaser release --snapshot --clean --release-notes .changes/$(changie latest).md
 ```
 
-### Tag the release locally and trigger goreleaser on Github CI
+#### Tag the release locally and trigger goreleaser on Github CI
 
 ```shell
 git tag $(changie latest)
