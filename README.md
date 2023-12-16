@@ -51,9 +51,9 @@ go install github.com/goreleaser/goreleaser@latest
 goreleaser release --snapshot --clean --release-notes .changes/$(changie latest).md
 ```
 
-### Tag the release locally
+### Tag the release locally and trigger goreleaser on Github CI
 
 ```shell
 git tag $(changie latest)
-git push --tags
+git push origin main && git push --tags
 ```
