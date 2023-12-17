@@ -66,7 +66,7 @@ Don't forget to commit the changes so that the workspace is clean:
 
 ```shell
 git add .
-git commit ...
+git commit -m "Prepare release $(changie latest)"
 ```
 
 #### Test goreleaser locally
