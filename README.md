@@ -5,6 +5,7 @@ Testing github actions
 ![Build and test](https://github.com/sercxanto/go-test-github-actions/actions/workflows/build-and-test.yml/badge.svg)
 ![golangci-lint](https://github.com/sercxanto/go-test-github-actions/actions/workflows/golangci-lint.yml/badge.svg)
 [![Go Reference](https://pkg.go.dev/badge/github.com/sercxanto/go-test-github-actions.svg)](https://pkg.go.dev/github.com/sercxanto/go-test-github-actions)
+[![codecov](https://codecov.io/gh/sercxanto/go-test-github-actions/graph/badge.svg?token=VJTH5YLEXS)](https://codecov.io/gh/sercxanto/go-test-github-actions)
 
 ## Developer documentation
 
