@@ -1,3 +1,4 @@
+// Package main is a simple hello world application
 package main
 
 import (
@@ -6,12 +7,13 @@ import (
 	cowsay "github.com/Code-Hex/Neo-cowsay/v2"
 )
 
-func genText() string {
+// GenText generates the text "Hello World!"
+func GenText() string {
 	return "Hello World!"
 }
 
 func main() {
-	fmt.Println(genText())
+	fmt.Println(GenText())
 	say, _ := cowsay.Say(
 		"Muuh!",
 		cowsay.Type("default"),

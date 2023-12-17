@@ -1,4 +1,5 @@
 # test-github-actions
+
 Testing github actions
 
 ![Build and test](https://github.com/sercxanto/test-github-actions/actions/workflows/build-and-test.yml/badge.svg)
@@ -8,12 +9,23 @@ Testing github actions
 
 ### Prerequisites
 
-This software uses [changie](https://changie.dev/) and [goreleaser](https://goreleaser.com/):
+This software uses [changie](https://changie.dev/), [goreleaser](https://goreleaser.com/)
+and [pkgsite](https://pkg.go.dev/golang.org/x/pkgsite/cmd/pkgsite):
 
 ```shell
 go install github.com/miniscruff/changie@latest
 go install github.com/goreleaser/goreleaser@latest
+go install golang.org/x/pkgsite/cmd/pkgsite@latest
 ```
+
+### Show documentation locally
+
+```shell
+pkgsite -open
+```
+
+This starts a webserver serving the documentation locally and opens a browser window pointing
+to the site.
 
 ### Start with a new change
 
