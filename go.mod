@@ -1,4 +1,4 @@
-module github.com/sercxanto/test-github-actions
+module github.com/sercxanto/go-test-github-actions
 
 go 1.21.1
 
